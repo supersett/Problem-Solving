@@ -1,6 +1,8 @@
 import sys
 n=int(sys.stdin.readline())
+
 count=0
+
 for i in range(1,n+1):
     #102
     data=list(str(i))
@@ -12,4 +14,5 @@ for i in range(1,n+1):
         break
     else:
         count+=1
+        
 print(count)
