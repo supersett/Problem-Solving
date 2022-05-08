@@ -17,4 +17,5 @@ def selfNum(n):
     for i in range(1,n):
         if content[i]==True:
             print(i)
+            
 selfNum(n)
