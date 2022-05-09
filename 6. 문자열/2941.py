@@ -13,9 +13,19 @@ count=0
 for i in data:
     val=n.find(i)
     if val!=-1:
-        n.replace(i,'')
         count+=1
-print(n)
-for x in range(len(n)):
-    count+=1
+        
+for i in data:
+    val=n.find(i)
+    if val!=-1:
+        n=n.replace(i," ")
+n=n.replace(" ","")
+
+for i in data:
+    val=n.find(i)
+    if val!=-1:
+        count+=1
+        
+count=count+len(n)-1
+
 print(count)
