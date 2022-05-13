@@ -1,19 +1,16 @@
-from asyncio.windows_events import NULL
 import sys
 n=int(sys.stdin.readline())
 data=[]
-
 for a in range(0,1001):
-    n=n-5*a
-    if n<0:
+    k=n-(5*a)
+    if k<0:
         break
-    if n%3==0:
-        if n!=0:
-            b=n//3
-            data.append(a+b)
-        else:
+    if k%3==0:
+        if k==0:
             data.append(a)
-print(data)
+        else:
+            b=k//3
+            data.append(a+b)
 if len(data)==0:
     print(-1)
 else:
