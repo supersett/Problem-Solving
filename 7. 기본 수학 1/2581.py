@@ -9,7 +9,6 @@ def primenum(x):
         if x%i==0:
             return False
     return True
-
 for i in range(m,n+1):
     if primenum(i) is True:
         if i!=1:
