@@ -7,7 +7,11 @@ def find(x):
         answer+=int(i)
     return answer
 
-for k in range(1,1000001):
+for k in range(1,1000002):
     data.append(find(k))
 
-print(data.index(n)+1)
+try:
+    print(data.index(n)+1)
+except:
+    print(0)
+    
