@@ -14,4 +14,3 @@ try:
     print(data.index(n)+1)
 except:
     print(0)
-    
