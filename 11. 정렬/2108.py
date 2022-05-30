@@ -7,6 +7,8 @@ data=[]
 for x in range(n):
     data.append(int(sys.stdin.readline()))
 
+
+
 data.sort()
 
 cnt=Counter(data).most_common(2)
