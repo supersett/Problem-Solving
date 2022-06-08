@@ -35,3 +35,8 @@ int_arr = arr.array('i',int_list)
 - 차집합 : difference
 - add, update, remove, clear, in, len, discard, pop 
 
+# 객체지향
+추상화 : 모델링
+상속 : 하위클래스는 상위클래스다
+다형성 : 오버라이딩,오버로딩
+캡슐화 : 정보은닉
