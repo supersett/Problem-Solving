@@ -14,3 +14,5 @@ for i in range(len(data_target)):
         print(count[data_target[i]],end=" ")
     else:
         print(0,end=" ")
+        
+        
