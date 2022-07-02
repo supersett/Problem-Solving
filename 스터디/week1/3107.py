@@ -8,11 +8,9 @@ for i in range(len(ip)):
     if len(ip[i]) == 4:
         ans[index] = ip[i]
         index += 1
-
     elif len(ip[i]) > 0:
         ans[index] = '0' * (4 - len(ip[i])) + ip[i]
         index += 1
-
     else: # len(ip[i]) == 0
         if flag == 0:
             for j in range(8 - len(ip) + 1):
