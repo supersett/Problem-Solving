@@ -14,12 +14,9 @@ for k in range(len(x)):
     numBefore=0
     if(len(stringNew)<numA):
       stringBefore=x[0:numA-n]
-    #  print(stringBefore)
       numBefore=stringBefore.count('b')
-    #print(stringNew)
     numB=stringNew.count('b')
     listNum.append(numB+numBefore)
-    #print(listNum)
     
 
 #print(listNum)
