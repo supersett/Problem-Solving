@@ -9,19 +9,15 @@ for x in range(n):
     input_list.reverse()
     todo.append(input_list)
 todo.sort()
-latest_time=0
-latest_time=todo[0][0]-todo[0][1]
-time=latest_time
+print(todo)
+time=0
 while True:
-    for x in range(0,n):
-        if (time + todo[x][1])>todo[x][x]:
-            latest_time-=1
-            break
+    sumtime=time
+    for x in todo:
+        if (time + x[1])<=x[0]:
+            time=time+x[1]
         else:
-            time=time+todo[x][1]
-    exit()
-if time<=24:
-    print(latest_time)
-else:
-    print('-1')                
+            print(time-1)
+            exit()
+    time+=1
 
