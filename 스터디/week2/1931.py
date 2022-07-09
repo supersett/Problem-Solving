@@ -10,7 +10,6 @@ for i in range(n):
 
 #회의 시작시간 순으로 배열을 정렬한다.
 sch=sorted(sch,key = lambda x: [x[1], x[0]])
-
 #print(sch)
 cnt_list=[]
 for i in range(n):
