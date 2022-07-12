@@ -14,6 +14,7 @@ time = 0
 while 1:
     # time만큼 늦게 시작함
     sumTime = time
+    
 
     #전체 일정들에 대해
     for t, s in schedule:
