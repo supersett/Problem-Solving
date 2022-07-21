@@ -24,3 +24,4 @@ for i in range(kind):
             s -= heapq.heappop(pq)
 if not find:
     print(-1)
+    
