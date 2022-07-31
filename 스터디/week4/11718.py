@@ -13,3 +13,4 @@ while True:
     # 그 외 오류가 있으면 멈춘다.
     except:
         break
+    
