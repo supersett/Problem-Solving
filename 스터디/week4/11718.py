@@ -1,16 +1,26 @@
 import sys
 
-# 반복문과 try문을 통해 입력을 받는다.
-while True:
-    try:
-        word = str(sys.stdin.readline().rstrip("\n"))
-        print(word)
+def solution(text):
+    answer = 0
+    return answer
 
-        # 입력이 없으면 반복문을 멈춘다.
-        if word == "":
-            break
+n=sys.stdin.readline().rstrip()
+target_list=list(n)
+count=0
 
-    # 그 외 오류가 있으면 멈춘다.
-    except:
-        break
+print(n)
+print(target_list)
+for x in target_list:
+    if x=="a":
+        count+=1
+    elif x =="e":
+        count+=1
+    elif x =="i":
+        count+=1
+    elif x == "o":
+        count+=1
+    elif x == "u":
+        count+=1
     
+
+print(count)
