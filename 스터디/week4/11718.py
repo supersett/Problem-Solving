@@ -7,7 +7,6 @@ def solution(text):
 n=sys.stdin.readline().rstrip()
 target_list=list(n)
 count=0
-
 print(n)
 print(target_list)
 for x in target_list:
