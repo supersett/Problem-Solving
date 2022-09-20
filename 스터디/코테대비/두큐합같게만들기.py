@@ -27,3 +27,4 @@ def solution(queue1, queue2):
             sum2 -= n
             sum1 += n
     return -1
+#느낀점
