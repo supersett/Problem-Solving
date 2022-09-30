@@ -28,3 +28,4 @@ def solution(queue1, queue2):
             sum1 += n
     return -1
 #느낀점
+#뭔가 원리를 이런식으로 단축할 수 있다는게 신기했다.
