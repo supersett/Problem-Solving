@@ -1,13 +1,14 @@
 
 
 def solution(k, dungeons):
+    cnt_list=[]
     
-    dungeons.sort(key=lambda x:(-x[0],x[1]))
-    #print(dungeons)
-    
-    for i in dungeons:
+    for i in range(0,len(dungeons)):
+        cnt=0    
+        if k>= dungeons[0]:
+            cal(k,dungeons[i])
+            cnt+=1
         
-    
     answer = -1
     return answer
 
