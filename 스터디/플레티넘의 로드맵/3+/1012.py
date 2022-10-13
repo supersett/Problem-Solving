@@ -41,13 +41,3 @@ for i in range(t):
 for z in answer:
      print(z)  
     
-
-
-
-
-#만든 재귀함수를 적용해
-
-
-
-#값을 프린트해
-
