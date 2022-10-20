@@ -11,6 +11,7 @@ for i in range(m):
 #print(graph)
 #visited=[[[False]*n] in range(m)]
 visited=[[False]*n for _ in range(m)]
+visited_2=[[False]*n for _ in range(m)]
 #print(visited)
 def bfs(x,y):
     q=deque()
@@ -35,18 +36,28 @@ def bfs(x,y):
     return count
 
 def CheckIfThereIsNo1Nearby0(x,y):
+    qu=deque()
+    qu.append((x,y))
+    visited_2[y][x]=True
+    count=0
+    
+    a,b=qu.popleft()
     dx=[0,0,1,-1]
     dy=[1,-1,0,0]
     for i in range(4):
-        nx = x+dx[i]
-        ny = y+dy[i]
+        nx = a+dx[i]
+        ny = b+dy[i]
             
         if nx>=n or ny>=m or n<0 or m<0:
             continue
         if graph[ny][nx]==1:
-            return '1'
-    
-    return '0'
+            return "True"
+        if graph[ny][nx]==0 and not visited_2[ny][nx]:
+            qu.append((nx,ny))
+            visited_2[ny][nx]=True
+            graph[ny][nx]=1
+            count+=1
+    return count
 
 
 #숙성시키는거 생각할게 왤케 많냐
