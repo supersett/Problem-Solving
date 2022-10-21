@@ -1,4 +1,5 @@
 #진짜개짜쯩ㅇ짜아짜ㅏ아아짜
+#원표 풀이 : https://www.acmicpc.net/source/47390787
 from collections import deque
 import sys
 #y=i
