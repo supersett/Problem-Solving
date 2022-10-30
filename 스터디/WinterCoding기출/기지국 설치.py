@@ -1,6 +1,6 @@
 from collections import deque
 def solution(n, stations, w):
-  cover=2*n+1  
+  cover=2*w+1  
   answer = 0
   graph=[0]*(n+1)
   for i in stations:
@@ -23,4 +23,4 @@ def solution(n, stations, w):
       d.popleft()
 
   return answer
-3 3 1 7891011 12~16
+#3 3 1 7891011 12~16

@@ -1,5 +1,4 @@
 from collections import defaultdict
-s=set()
 dic_graph=defaultdict(list)
 import sys
 sys.setrecursionlimit(10000)

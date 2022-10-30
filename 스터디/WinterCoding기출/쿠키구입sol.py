@@ -3,7 +3,7 @@ def solution(cookie):
     answer = 0
     length=len(cookie)
     
-    for i in range(length):
+    for i in range(length-1):
       
       left_sum=cookie[i]
       left_cursor=i
@@ -14,10 +14,10 @@ def solution(cookie):
         if left_sum==right_sum:
           answer=max(answer,left_sum)
         
-        if left_sum>=right_sum and left_cursor>0:
+        if left_cursor>0 and left_sum<=right_sum :
           left_cursor-=1
           left_sum+=cookie[left_cursor]
-        elif left_sum<=right_sum and right_cursor<length:
+        elif right_cursor<length-1 and left_sum>=right_sum :
           right_cursor+=1
           right_sum+=cookie[right_cursor]
         else:
