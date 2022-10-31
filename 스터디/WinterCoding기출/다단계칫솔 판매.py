@@ -18,3 +18,5 @@ def solution(enroll, referral, seller, amount):
         m//=10
         s=referral[idx]
     return money
+  
+#이문제는 재귀, 한번에 돌린다. 흐름에 맞춰서. 좋은문제인것같음.
