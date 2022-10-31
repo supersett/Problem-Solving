@@ -39,7 +39,7 @@ def solution(rows, columns, queries):
         num=graph[a][b]
         b-=1
         target_min=min(target_min,num)
-      graph[a][b]=target
+      graph[a][b+1]=target
       target_min=min(target_min,target)
       
       return target_min
