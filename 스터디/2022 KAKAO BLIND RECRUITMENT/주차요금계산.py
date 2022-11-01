@@ -38,8 +38,8 @@ def solution(fees, records):
       
       fee=calculate_fee(min)
       answer.append(fee)
-    print(answer)
-    print(calculate_fee(1439))
+    #print(answer)
+    #print(calculate_fee(1439))
     return answer
   
-solution([1, 461, 1, 10],["00:00 1234 IN"])
+#solution([1, 461, 1, 10],["00:00 1234 IN"])
