@@ -1,35 +1,38 @@
+def skillCheck(s_map, skill):
+    for action in skill:
+        r1 = action[1]; c1 = action[2]; r2 = action[3]; c2 = action[4]
+        degree = action[5]
+       
+        if action[0] == 1: # attack
+            s_map[r1][c1] -= degree
+            s_map[r1][c2+1] += degree
+            s_map[r2+1][c1] += degree
+            s_map[r2+1][c2+1] -= degree
+        else: # restore
+            s_map[r1][c1] += degree
+            s_map[r1][c2+1] -= degree
+            s_map[r2+1][c1] -= degree
+            s_map[r2+1][c2+1] += degree
+   
+    for r in range(n+1): # 행 기준 누적합
+        for c in range(1, m+1):
+            s_map[r][c] += s_map[r][c-1]
+           
+    for c in range(m+1): # 열 기준 누적합
+        for r in range(1, n+1):
+            s_map[r][c] += s_map[r-1][c]      
+    return
+           
 def solution(board, skill):
+    global n, m
+    n = len(board); m = len(board[0])
+    s_map = [[0]*(m+1) for _ in range(n+1)]
+    skillCheck(s_map, skill)
+   
     answer = 0
-    tmp=[[0]*(len(board[0])+1) for i in range(len(board)+1)]
-    
-    for type,r1,c1,r2,c2,degree in skill:
-      if type==1:
-        degree=degree*(-1)
-      tmp[r1][c1]-=degree
-      tmp[r1][c2+1]+=degree
-      tmp[r2+1][c1]+=degree
-      tmp[r2+1][c2+1]-=degree
-    
-    
-    
-    #행 기준 누적합  
-    for i in range(len(tmp)-1):
-      for j in range(len(tmp[0])-1):
-        tmp[i][j+1]+=tmp[i][j]
-    
-    #열 기준 누적합
-    for j in range(len(tmp[0])-1):
-      for i in range(len(tmp)-1):
-        tmp[i][j+1]+=tmp[i][j]
-    
-    
-    for i in range(len(board)):
-        for j in range(len(board[i])):
-            board[i][j] += tmp[i][j]
-            # board에 값이 1이상인 경우 answer++
-            if board[i][j] > 0: answer += 1
-    
+    for r in range(n):
+        for c in range(m):
+            if s_map[r][c] + board[r][c] > 0:
+                answer += 1
+               
     return answer
-
-
-#solution([[5,5,5,5,5],[5,5,5,5,5],[5,5,5,5,5],[5,5,5,5,5]],[[1,0,0,3,4,4],[1,2,0,2,3,2],[2,1,0,3,1,2],[1,0,1,3,3,1]])
