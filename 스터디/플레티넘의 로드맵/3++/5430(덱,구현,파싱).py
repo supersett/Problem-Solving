@@ -44,4 +44,5 @@ for i in range(T):
       answer.append(list(d))
       break
   
-print(answer)
+for i in answer:
+  print(i)
