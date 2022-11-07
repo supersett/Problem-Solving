@@ -3,6 +3,7 @@ from collections import deque
 #이 알고리즘을 쓰면 끝까지 풀릴것같은데?
 #무슨상황에서 무슨 해결방법을
 #문제마다 분기점이생기는데 뚜렷하게 뭘 할지를 알고 해결해야함
+
 def solution(line):
     line_list=list(line)
     answer = ''
