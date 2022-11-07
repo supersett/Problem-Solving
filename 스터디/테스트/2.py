@@ -17,7 +17,7 @@ def solution(n, student, point):
     test=set()
     list_high=[]
     #우열반 편성
-    dic = sorted(dic.items(), key=operator.itemgetter(1),reverse=True)
+    dic = sorted(dic.items(), key=lambda x:(-x[1],x[0]))
     dic=dict(dic)
     for key,value in dic.items():
       list_high.append([key,value])
@@ -28,7 +28,7 @@ def solution(n, student, point):
     
     for i,j in zip(student,point):
       dic[i]+=j
-      dic = sorted(dic.items(), key=operator.itemgetter(1),reverse=True)
+      dic = sorted(dic.items(), key=lambda x:(-x[1],x[0]))
       dic=dict(dic)
       for key,value in dic.items():
         list_high.append([key,value])
