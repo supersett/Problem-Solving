@@ -9,7 +9,7 @@ for i in range(N+M):
 
 dic = sorted(dic.items(), key=lambda x:-x[1])
 dic=dict(dic)
-print(dic)
+#print(dic)
 #해당 위치까지 걸린 최소 수를 저장해줄 예정
 visited=[0]*110
 

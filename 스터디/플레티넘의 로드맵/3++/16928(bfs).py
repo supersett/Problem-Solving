@@ -24,7 +24,8 @@ def bfs(now):
     for i in range(1,7):
       new=check+i
       #주사위를 굴려 100에 도달하면 종료
-      
+      #아 이동이 아니라 해당위치를 바로 반환을 해줘야 하는구나......
+      # 대입이 아니었어
       if visited[new]==0:
         visited[new]=visited[check]+1
       else:
@@ -34,6 +35,9 @@ def bfs(now):
       #사다리 있는지 찾기
       if new in dic:
         visited[dic[new]]=visited[new]
+        
+        
+        
     if check>100:
       break
     q.append(check+6)
