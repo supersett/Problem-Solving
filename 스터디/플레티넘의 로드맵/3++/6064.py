@@ -20,6 +20,8 @@ for _ in range(T):
         answer.append(M*a+x)
         isAnswerExsist=True
         break
+    if isAnswerExsist:
+      break
   if not isAnswerExsist:
     answer.append(-1)
 
