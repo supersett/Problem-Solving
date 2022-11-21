@@ -5,35 +5,34 @@ sys.setrecursionlimit(10**6)
 N=int(sys.stdin.readline().rstrip())
 graph=[(list(map(int,sys.stdin.readline().split()))) for i in range(N)]
 target=defaultdict(list)
-print(graph)
+#print(graph)
 
-for i in range(N):
-  for j in range(N):
-    if graph[i][j]==1:
-      target[i+1].append(j+1)
+# for i in range(N):
+#   for j in range(N):
+#     if graph[i][j]==1:
+#       target[i+1].append(j+1)
 
-print(target)
+# #print(target)
 visited=[[0]*N for i in range(N)]
 
 def bfs(now):
+  global N
   d=deque()
   d.append(now)
-
+  check=[0 for _ in range(N)]
   while d:
-    check=d.popleft()
-    #다음으로 넘어갈 선이 존재한다면
-    if check in target.keys():
-      for i in range(len(target[check])):
-        if visited[check-1][target[check][i]-1]==0:
-          visited[check-1][target[check][i]-1]=1
-          d.append(target[check][i])
-        else:
-          break
-      #이미 체크를 한 상태    
+    q=d.popleft()
     
-for i in range(1,N+1):
+    for i in range(N):
+      if check[i]==0 and graph[q][i]==1:
+        d.append(i)
+        check[i]=1
+        visited[now][i]=1
+
+    
+for i in range(0,N):
   bfs(i)
-print(visited)
-        
-  
+
+for i in visited:
+  print(*i)  
 
