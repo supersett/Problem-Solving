@@ -7,7 +7,7 @@ for _ in range(N):
   target.append(int(sys.stdin.readline().rstrip()))
 
 target.sort(reverse=True)
-print(target)
+#print(target)
 
 for i in target:
   if K>=i:
