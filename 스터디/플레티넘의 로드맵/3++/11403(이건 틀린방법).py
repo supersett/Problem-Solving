@@ -23,6 +23,9 @@ def dfs(now):
     return
 for i in range(1,N+1):
   dfs(i)
+
+
+  
 print(dic)
 
       

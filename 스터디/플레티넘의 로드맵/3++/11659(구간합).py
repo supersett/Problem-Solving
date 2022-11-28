@@ -7,7 +7,7 @@ tmp=0
 for i in target:
   tmp+=i
   sum.append(tmp)
-print(sum)
+#print(sum)
 
 test=[]
 answer=[]
