@@ -30,7 +30,8 @@ for i in range(total_case):
   
   for j in target:
     d[j]+=1
-    
+  
+  #defaultdict(<class 'int'>, {1: 5, 9: 1})
   #print(d)
   while target_sett:
     num=target_sett.popleft()
@@ -51,22 +52,3 @@ for i in range(total_case):
 
 for _ in real_target:
   print(_)
-    
-      
-        
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
-
-
