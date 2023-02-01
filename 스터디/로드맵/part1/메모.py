@@ -1,6 +1,6 @@
 import sys
 
-input=sys.stdin.readline
+input=sys.stdin.readline1 
 
 x,y=map(int,input().split())
 
