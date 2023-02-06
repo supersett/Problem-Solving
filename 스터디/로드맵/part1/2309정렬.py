@@ -5,7 +5,7 @@ target_9=[]
 for i in range(9):
   target_9.append(int(input()))
 
-print(target_9)
+#print(target_9)
 total=sum(target_9)
 superbreak=False
 
